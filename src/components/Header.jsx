@@ -4,10 +4,10 @@ import ButtonsLink from './Buttons.jsx';
 import logo from '../logo.png';
 
 const HeaderComponent = () => (
-  <nav className="navbar navbar-expand-lg border-bottom border-dark bg-dark bg-opacity-50" role="navigation">
+  <nav className="navbar navbar-expand-lg border-bottom border-dark bg-dark bg-opacity-50 container-fluid mx-auto" role="navigation">
     <div className="container p-0 d-flex">
       <img src={logo} width="200" alt="Войти" />
-      <div className="container" id="navbar" aria-expanded="false">
+      <div className="container-fluid d-flex wrapper" id="navbar" aria-expanded="false">
         <ButtonsLink />
       </div>
       <div className="container-fluid p-2 d-flex align-items-end justify-content-end">

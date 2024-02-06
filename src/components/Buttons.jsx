@@ -22,14 +22,14 @@ const ButtonsLink = () => {
   }, [dispatch, radioValue]);
 
   return (
-    <ButtonGroup>
+    <ButtonGroup className="justify-content-center">
       {radios.map((radio, idx) => (
         <ToggleButton
           key={`${radio.value}`}
           id={`radio-${idx}`}
           type="radio"
           name="radio"
-          variant="transparent"
+          variant="transparent container-fluid mx-auto"
           value={radio.value}
           checked={radioValue === radio.value}
           onChange={(e) => setRadioValue(e.currentTarget.value)}
