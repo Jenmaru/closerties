@@ -4,15 +4,13 @@ import ButtonsLink from './Buttons.jsx';
 import logo from '../logo.png';
 
 const HeaderComponent = () => (
-  <nav className="navbar navbar-expand-lg border-bottom border-dark bg-dark bg-opacity-50 d-grid mx-auto" role="navigation">
-    <div className="container p-0 d-flex">
+  <nav className="navbar border-bottom border-dark bg-dark bg-opacity-50 mx-auto" role="navigation">
+    <div className="container-fluid">
       <img src={logo} width="200" alt="Войти" />
-      <div className="container-fluid d-flex wrapper" id="navbar" aria-expanded="false">
+      <div className="d-grid" id="navbar" aria-expanded="false">
         <ButtonsLink />
       </div>
-      <div className="container-fluid p-2 d-flex align-items-end justify-content-end">
-        <text className="fs-4 fw-weight-bolder">1PersonStudio</text>
-      </div>
+      <text className="align-items-end justify-content-end">1PersonStudio</text>
     </div>
   </nav>
 );
