@@ -22,7 +22,7 @@ const ButtonsLink = () => {
   }, [dispatch, radioValue]);
 
   return (
-    <ButtonGroup className="justify-content-center">
+    <ButtonGroup className="justify-content-center d-grid">
       {radios.map((radio, idx) => (
         <ToggleButton
           key={`${radio.value}`}
