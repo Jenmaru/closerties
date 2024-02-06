@@ -4,7 +4,7 @@ import React from 'react';
 const Story = () => (
   <div className="container col-12 col-md-1" style={{ width: '800px', marginTop: '1rem' }}>
     <h1 style={{
-      fontFamily: 'Arial, sans-serif', fontSize: '70px', fontWeight: 'bold', backgroundColor: '#2AA5A0', backgroundImage: 'linear-gradient(90deg, #E3635D, #7AA2A9)', webkitBackgroundClip: 'text', webkitTextFillColor: 'transparent',
+      fontFamily: 'Arial, sans-serif', fontSize: '70px', fontWeight: 'bold', backgroundColor: '#2AA5A0', backgroundImage: 'linear-gradient(90deg, #E3635D, #7AA2A9)', webkitBackgroundClip: 'text', webkitTextFillColor: 'transparent'
     }}
     >
       Как всё начиналось

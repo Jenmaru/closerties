@@ -1047,3 +1047,10 @@ body.video-react-full-window .video-react-fullscreen {
   -webkit-transform: translateY(-30px);
   transform: translateY(-30px);
 }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
