@@ -22,8 +22,14 @@ const ButtonsLink = () => {
   }, [dispatch, radioValue]);
 
   return (
-    <ButtonGroup>
+    <>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <ButtonGroup className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav">
       {radios.map((radio, idx) => (
+        <li className="nav-item">
         <ToggleButton
           key={`${radio.value}`}
           id={`radio-${idx}`}
@@ -33,13 +39,16 @@ const ButtonsLink = () => {
           value={radio.value}
           checked={radioValue === radio.value}
           onChange={(e) => setRadioValue(e.currentTarget.value)}
-          className={radioValue === radio.value ? 'text-danger' : 'text-white'}
+          className={radioValue === radio.value ? 'text-danger nav-link' : 'text-white nav-link'}
           style={{ opacity: '1' }}
         >
-          {radio.name}
+          {radio.name} 
         </ToggleButton>
+        </li>
       ))}
+      </ul>
     </ButtonGroup>
+    </>
   );
 };
 
