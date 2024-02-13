@@ -23,10 +23,7 @@ const ButtonsLink = () => {
 
   return (
     <>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <ButtonGroup className="collapse navbar-collapse" id="navbarNav">
+    <ButtonGroup className="collapse navbar-collapse col-md-7" id="navbarNav">
       <ul className="navbar-nav">
       {radios.map((radio, idx) => (
         <li className="nav-item">
