@@ -22,8 +22,7 @@ const ButtonsLink = () => {
   }, [dispatch, radioValue]);
 
   return (
-    <>
-    <ButtonGroup className="collapse navbar-collapse col-md-7" id="navbarNav">
+    <ButtonGroup className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
       {radios.map((radio, idx) => (
         <li className="nav-item">
@@ -45,7 +44,6 @@ const ButtonsLink = () => {
       ))}
       </ul>
     </ButtonGroup>
-    </>
   );
 };
 
