@@ -5,12 +5,12 @@ import qr from '../qr.png';
 
 const Build = () => (
   <>
-  <div className="d-flex container align-items-center col-12 col-md-0" style={{ width: '800px', marginTop: '10rem' }}>
+  <div className="d-flex justify-content-center align-items-center" style={{ marginTop: '10rem' }}>
     <a href="https://disk.yandex.ru/i/gi72i3iHleq-3g">
       <img src={logo} alt="download" style={{ maxWidth: '100%', height: 'auto' }} />
     </a>
   </div>
-  <div className="d-flex container align-items-center col-12 col-md-1">
+  <div className="d-flex justify-content-center align-items-center">
   <img src={qr} alt="qr" style={{ maxWidth: '100%', height: 'auto' }} />
 </div>
 </>

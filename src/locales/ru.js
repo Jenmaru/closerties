@@ -4,5 +4,12 @@ export default {
       studio: '1PersonStudio',
       title: 'Closer Ties',
     },
+    modal: {
+      add: 'Комментарий',
+      send: 'Отправить',
+      cancel: 'Отменить',
+      name: 'Имя',
+      message: 'Комментарий',
+    },
   },
 };
