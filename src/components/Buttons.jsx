@@ -13,16 +13,8 @@ const radios = [
   { name: 'Помощь проекту', value: '6' },
 ];
 
-const ButtonsLink = () => {
-  const dispatch = useDispatch();
-  const [pageValue, setPageValue] = useState('1');
-
-  useEffect(() => {
-    dispatch(pagesAction.openPage({ type: pageValue }));
-  }, [dispatch, pageValue]);
-
-  return (
-    <ButtonGroup className="collapse navbar-collapse" id="navbarNav">
+const ButtonGroupFunc = ({ radios, pageValue, setPageValue }) => (
+<ButtonGroup className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
       {radios.map((radio, idx) => (
         <li className="nav-item">
@@ -44,6 +36,18 @@ const ButtonsLink = () => {
       ))}
       </ul>
     </ButtonGroup>
+)
+
+const ButtonsLink = () => {
+  const dispatch = useDispatch();
+  const [pageValue, setPageValue] = useState('1');
+
+  useEffect(() => {
+    dispatch(pagesAction.openPage({ type: pageValue }));
+  }, [dispatch, pageValue]);
+
+  return (
+    <ButtonGroupFunc radios={radios} pageValue={pageValue} setPageValue={setPageValue} />
   );
 };
 
