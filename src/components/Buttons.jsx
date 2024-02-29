@@ -6,7 +6,7 @@ import { actions as pagesAction } from '../slices/pagesSlice.js';
 
 const ButtonsLink = () => {
   const dispatch = useDispatch();
-  const [radioValue, setRadioValue] = useState('1');
+  const [pageValue, setPageValue] = useState('1');
 
   const radios = [
     { name: 'Главная', value: '1' },
@@ -18,8 +18,8 @@ const ButtonsLink = () => {
   ];
 
   useEffect(() => {
-    dispatch(pagesAction.openPage({ type: radioValue }));
-  }, [dispatch, radioValue]);
+    dispatch(pagesAction.openPage({ type: pageValue }));
+  }, [dispatch, pageValue]);
 
   return (
     <ButtonGroup className="collapse navbar-collapse" id="navbarNav">
@@ -33,9 +33,9 @@ const ButtonsLink = () => {
           name="radio"
           variant="transparent"
           value={radio.value}
-          checked={radioValue === radio.value}
-          onChange={(e) => setRadioValue(e.currentTarget.value)}
-          className={radioValue === radio.value ? 'text-danger nav-link' : 'text-white nav-link'}
+          checked={pageValue === radio.value}
+          onChange={(e) => setPageValue(e.currentTarget.value)}
+          className={pageValue === radio.value ? 'text-danger nav-link' : 'text-white nav-link'}
           style={{ opacity: '1' }}
         >
           {radio.name} 
