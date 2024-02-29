@@ -4,18 +4,18 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 import { useDispatch } from 'react-redux';
 import { actions as pagesAction } from '../slices/pagesSlice.js';
 
+const radios = [
+  { name: 'Главная', value: '1' },
+  { name: 'История мира', value: '2' },
+  { name: 'Галерея', value: '3' },
+  { name: 'Комментарии', value: '4' },
+  { name: 'Скачать билд', value: '5' },
+  { name: 'Помощь проекту', value: '6' },
+];
+
 const ButtonsLink = () => {
   const dispatch = useDispatch();
   const [pageValue, setPageValue] = useState('1');
-
-  const radios = [
-    { name: 'Главная', value: '1' },
-    { name: 'История мира', value: '2' },
-    { name: 'Галерея', value: '3' },
-    { name: 'Комментарии', value: '4' },
-    { name: 'Скачать билд', value: '5' },
-    { name: 'Помощь проекту', value: '6' },
-  ];
 
   useEffect(() => {
     dispatch(pagesAction.openPage({ type: pageValue }));
