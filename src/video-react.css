@@ -1060,12 +1060,36 @@ body {
   margin-left: -1rem; 
 }
 
+
 @media screen and (max-width:1000px) {
   .navButton {
     display: flex;
     width: 100vw;
     height: auto;
     text-indent: 10px;
+  }
+  .butttoggle {
+    width: 2.8rem;
+    margin-left: 5.4rem;
+  }
+  .navbar-toggler-icon {
+    margin-left: -0.4rem;
+  }
+}
+
+@media screen and (max-width:770px) {
+  .navButton {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    text-indent: 10px;
+  }
+  .butttoggle {
+    width: 2.8rem;
+    margin-left: 0.85rem;
+  }
+  .navbar-toggler-icon {
+    margin-left: -0.4rem;
   }
 }
 
