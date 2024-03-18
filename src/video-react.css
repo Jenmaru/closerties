@@ -1048,16 +1048,46 @@ body.video-react-full-window .video-react-fullscreen {
   transform: translateY(-30px);
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-gap: 20px;
-}
-
 body {
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
         display: 'grid';
       }
+
+
+.logo {
+  margin-left: -1rem; 
+}
+
+@media screen and (max-width:1000px) {
+  .navButton {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    text-indent: 10px;
+  }
+}
+
+@media screen and (max-width:575px) {
+  .navButton {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    text-indent: 10px;
+  }
+  .butttoggle {
+    width: 2.8rem;
+    margin-left: 1.1rem;
+  }
+  .navbar-toggler-icon {
+    margin-left: -0.4rem;
+  }
+  .logo {
+    width: 87vw;
+    margin-left: -1.8rem;
+  }
+}
+
+
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 import { createSlice, createEntityAdapter } from '@reduxjs/toolkit';
 
 const messagesAdapter = createEntityAdapter();

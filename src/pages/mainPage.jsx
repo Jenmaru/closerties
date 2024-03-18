@@ -4,11 +4,11 @@ import Pages from '../components/PagesSelector.jsx';
 import ModalComponent from '../components/Modal.jsx';
 
 const MainPage = () => (
-        <>
-          <HeaderComponent />
-          <Pages />
-          <ModalComponent />
-        </>
+  <>
+    <HeaderComponent />
+    <Pages />
+    <ModalComponent />
+  </>
 );
 
 export default MainPage;

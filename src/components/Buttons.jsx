@@ -13,32 +13,34 @@ const radios = [
   { name: 'Помощь проекту', value: '6' },
 ];
 
-const ButtonGroupFunc = ({ radios, pageValue, setPageValue }) => (
-<ButtonGroup className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav">
+const ButtonGroupFunc = ({
+  pageValue, setPageValue, nameButton, nameId,
+}) => (
+  <ButtonGroup className={`${nameButton} justify-content-center`} id={`${nameId}`}>
+    <ul className="navbar-nav">
       {radios.map((radio, idx) => (
-        <li className="nav-item">
-        <ToggleButton
-          key={`${radio.value}`}
-          id={`radio-${idx}`}
-          type="radio"
-          name="radio"
-          variant="transparent"
-          value={radio.value}
-          checked={pageValue === radio.value}
-          onChange={(e) => setPageValue(e.currentTarget.value)}
-          className={pageValue === radio.value ? 'text-danger nav-link' : 'text-white nav-link'}
-          style={{ opacity: '1' }}
-        >
-          {radio.name} 
-        </ToggleButton>
+        <li key={`${radio.value}`} className="nav-item">
+          <ToggleButton
+            key={`${radio.value}`}
+            id={`radio-${idx}`}
+            type="radio"
+            name="radio"
+            variant="dark"
+            value={radio.value}
+            checked={pageValue === radio.value}
+            onChange={(e) => setPageValue(e.currentTarget.value)}
+            className={pageValue === radio.value ? 'text-danger nav-link navButton' : 'text-white nav-link navButton'}
+            style={{ opacity: '1' }}
+          >
+            {radio.name}
+          </ToggleButton>
         </li>
       ))}
-      </ul>
-    </ButtonGroup>
-)
+    </ul>
+  </ButtonGroup>
+);
 
-const ButtonsLink = () => {
+const ButtonsLink = ({ nameButton, nameId }) => {
   const dispatch = useDispatch();
   const [pageValue, setPageValue] = useState('1');
 
@@ -47,7 +49,12 @@ const ButtonsLink = () => {
   }, [dispatch, pageValue]);
 
   return (
-    <ButtonGroupFunc radios={radios} pageValue={pageValue} setPageValue={setPageValue} />
+    <ButtonGroupFunc
+      pageValue={pageValue}
+      setPageValue={setPageValue}
+      nameButton={nameButton}
+      nameId={nameId}
+    />
   );
 };
 
