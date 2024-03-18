@@ -1060,8 +1060,11 @@ body {
   margin-left: -1rem; 
 }
 
+.navButton {
+  border-radius:0%;
+}
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width:991px) {
   .navButton {
     display: flex;
     width: 100vw;

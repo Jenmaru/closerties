@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { actions as pagesAction } from '../slices/pagesSlice.js';
 
 const radios = [
@@ -14,7 +14,7 @@ const radios = [
 ];
 
 const ButtonGroupFunc = ({
-  pageValue, setPageValue, nameButton, nameId,
+  pageValue, setPageValue, nameButton, nameId, varik,
 }) => (
   <ButtonGroup className={`${nameButton} justify-content-center`} id={`${nameId}`}>
     <ul className="navbar-nav">
@@ -25,12 +25,11 @@ const ButtonGroupFunc = ({
             id={`radio-${idx}`}
             type="radio"
             name="radio"
-            variant="dark"
+            variant={varik}
             value={radio.value}
             checked={pageValue === radio.value}
             onChange={(e) => setPageValue(e.currentTarget.value)}
             className={pageValue === radio.value ? 'text-danger nav-link navButton' : 'text-white nav-link navButton'}
-            style={{ opacity: '1' }}
           >
             {radio.name}
           </ToggleButton>
@@ -40,9 +39,11 @@ const ButtonGroupFunc = ({
   </ButtonGroup>
 );
 
-const ButtonsLink = ({ nameButton, nameId }) => {
+const ButtonsLink = ({ nameButton, nameId, varik }) => {
   const dispatch = useDispatch();
   const [pageValue, setPageValue] = useState('1');
+  const page = useSelector((state) => state.pages);
+  const { type } = page;
 
   useEffect(() => {
     dispatch(pagesAction.openPage({ type: pageValue }));
@@ -50,10 +51,11 @@ const ButtonsLink = ({ nameButton, nameId }) => {
 
   return (
     <ButtonGroupFunc
-      pageValue={pageValue}
+      pageValue={type}
       setPageValue={setPageValue}
       nameButton={nameButton}
       nameId={nameId}
+      varik={varik}
     />
   );
 };
