@@ -1113,7 +1113,7 @@ body {
   }
 }
 
-@media screen and (max-width:476px) {
+@media screen and (max-width:448px) {
   .navButton {
     display: flex;
     width: 100vw;
@@ -1128,7 +1128,7 @@ body {
     margin-left: -0.4rem;
   }
   .logo {
-    width: 87vw;
+    width: 77vw;
     margin-left: -1.8rem;
   }
 }
